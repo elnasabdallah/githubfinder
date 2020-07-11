@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
-const Useritem = ({ user: { login, html_url, avatar_url } }) => {
+const Useritem = ({ user: { login, avatar_url } }) => {
   return (
     <div className="card text-center">
       <img

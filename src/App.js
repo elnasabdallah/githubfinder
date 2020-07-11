@@ -10,19 +10,9 @@ import About from './components/pages/About';
 import User from './components/users/User';
 import GithubState from './context/github/GithubState';
 import AlertState from './context/alert/AlertState';
-import alertContext from './context/alert/alertContext';
+
 const App = () => {
   //  const [loading, setLoading] = useState(false); state with a hook
-
-  /*  async componentDidMount() {
-    console.log(process.env.REACT_APP_GITHUB_CLIENT_ID);
-    this.setState({ loading: true });
-    const res = await axios.get(
-      `https://api.github.com/users?client_id=${process.env.REACT_APP_GITHUB_CLIENT_ID}&client_secrete=${process.env.REACT_APP_GITHUB_CLIENT_SECRETE}`
-    );
-    this.setState({ users: res.data, loading: false });
-    console.log(res.data);
-  } */
 
   return (
     <GithubState>
