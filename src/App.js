@@ -1,15 +1,15 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import './App.css';
-import Navbar from './components/layout/Navbar';
-import Home from './components/pages/Home';
-import NotFound from './components/pages/NotFound';
+import React from "react";
+import { HashRouter, Route, Switch } from "react-router-dom";
+import "./App.css";
+import Navbar from "./components/layout/Navbar";
+import Home from "./components/pages/Home";
+import NotFound from "./components/pages/NotFound";
 
-import Alert from './components/layout/Alert';
-import About from './components/pages/About';
-import User from './components/users/User';
-import GithubState from './context/github/GithubState';
-import AlertState from './context/alert/AlertState';
+import Alert from "./components/layout/Alert";
+import About from "./components/pages/About";
+import User from "./components/users/User";
+import GithubState from "./context/github/GithubState";
+import AlertState from "./context/alert/AlertState";
 
 const App = () => {
   //  const [loading, setLoading] = useState(false); state with a hook
@@ -17,7 +17,7 @@ const App = () => {
   return (
     <GithubState>
       <AlertState>
-        <Router>
+        <HashRouter>
           <div className="App">
             <Navbar />
             <div className="container">
@@ -30,7 +30,7 @@ const App = () => {
               </Switch>
             </div>
           </div>
-        </Router>
+        </HashRouter>
       </AlertState>
     </GithubState>
   );
