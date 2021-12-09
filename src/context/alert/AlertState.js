@@ -1,9 +1,9 @@
-import React, { useReducer } from 'react';
-import AlertContext from './alertContext';
-import alertReducer from './alertReducer';
-import { SET_ALERT, REMOVE_ALERT } from '../types';
+import React, { useReducer } from "react";
+import AlertContext from "./alertContext";
+import alertReducer from "./alertReducer";
+import { SET_ALERT, REMOVE_ALERT } from "../types";
 
-const AlertState = props => {
+const AlertState = (props) => {
   const initialState = null;
 
   const [state, dispatch] = useReducer(alertReducer, initialState);
@@ -16,14 +16,14 @@ const AlertState = props => {
       type: SET_ALERT,
       payload: {
         msg,
-        type
-      }
+        type,
+      },
     });
 
     setTimeout(
       () =>
         dispatch({
-          type: REMOVE_ALERT
+          type: REMOVE_ALERT,
         }),
       5000
     );

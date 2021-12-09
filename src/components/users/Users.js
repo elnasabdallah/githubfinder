@@ -1,7 +1,7 @@
-import React, { useContext } from 'react';
-import Useritem from './Useritem';
-import Spinner from '../layout/Spinner';
-import GithubContext from '../../context/github/githubContext';
+import React, { useContext } from "react";
+import Useritem from "./Useritem";
+import Spinner from "../layout/Spinner";
+import GithubContext from "../../context/github/githubContext";
 
 const Users = () => {
   const githubContext = useContext(GithubContext);
@@ -11,7 +11,7 @@ const Users = () => {
   } else {
     return (
       <div style={userSyle}>
-        {users.map(item => (
+        {users.map((item) => (
           <Useritem key={item.id} user={item} />
         ))}
       </div>
@@ -19,9 +19,9 @@ const Users = () => {
   }
 };
 const userSyle = {
-  display: 'grid',
-  gridTemplateColumns: 'repeat(3, 1fr)',
-  gridGap: '1em'
+  display: "grid",
+  gridTemplateColumns: "repeat(3, 1fr)",
+  gridGap: "1em",
 };
 
 export default Users;

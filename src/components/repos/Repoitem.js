@@ -1,5 +1,5 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 const Repoitem = ({ repo }) => {
   return (
     <div className="card">
@@ -11,7 +11,7 @@ const Repoitem = ({ repo }) => {
 };
 
 Repoitem.prototype = {
-  repo: PropTypes.object.isRequired
+  repo: PropTypes.object.isRequired,
 };
 
 export default Repoitem;

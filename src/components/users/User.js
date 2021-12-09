@@ -1,8 +1,8 @@
-import React, { useEffect, useContext } from 'react';
-import Spinner from './../layout/Spinner';
-import { Link } from 'react-router-dom';
-import Repos from './../repos/Repos';
-import GithubContext from '../../context/github/githubContext';
+import React, { useEffect, useContext } from "react";
+import Spinner from "./../layout/Spinner";
+import { Link } from "react-router-dom";
+import Repos from "./../repos/Repos";
+import GithubContext from "../../context/github/githubContext";
 
 const User = ({ match }) => {
   const githubContext = useContext(GithubContext);
@@ -27,7 +27,7 @@ const User = ({ match }) => {
     public_repos,
     public_gists,
     hirable,
-    company
+    company,
   } = user;
 
   if (loading) return <Spinner />;
@@ -37,7 +37,7 @@ const User = ({ match }) => {
       <Link to="/" className="btn btn-light">
         back to search
       </Link>
-      Hirable :{' '}
+      Hirable :{" "}
       {hirable ? (
         <i className="fas fa-check text-success" />
       ) : (
@@ -46,9 +46,10 @@ const User = ({ match }) => {
       <div className="card grid-2">
         <div className="all-center">
           <img
+            alt="s"
             src={avatar_url}
             className="round-img"
-            style={{ width: '150px' }}
+            style={{ width: "150px" }}
           />
           <h1>{name}</h1>
           <p>loaction: {location}</p>
